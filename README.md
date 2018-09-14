@@ -17,14 +17,13 @@ The genesis deploys:
 Connected to Alice node (8545)
 
 I want to call `setRelay(0x0000000000000000000000000000000000000005)`, but before Remix sends an RPC to know the amount of gas:
-```solidity
+```json
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{"from": "0xc6fe8f53e90391cafe9a1626bff815ac87b2739f", "to": "0x0000000000000000000000000000000000000006", "data": "0xc805f68b0000000000000000000000000000000000000000000000000000000000000005"}],"id":1}' -H "Content-Type: application/json" -X POST localhost:8545
 ```
 
 This errors out, [the issue #8675 relates to it](https://github.com/paritytech/parity-ethereum/issues/8675): 
-```
+```json
 {"jsonrpc":"2.0","error":{"code":-32015,"message":"Transaction execution error.","data":"Internal(\"Requires higher than upper limit of 80000000\")"},"id":1}
-
 ```
 
 Calling the transaction still, the transaction execution fails (status: `0x0`)

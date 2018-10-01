@@ -1,0 +1,29 @@
+# File node0.toml
+
+[parity]
+chain = "Validator-set-tutorial.json"
+base_path = "node0"
+
+[network]
+port = 30300
+bootnodes = [
+"enode://dd87dbdb2ce7eec42cc4655a3e5abe12cdd0ede81b44f5492c84c892a9b209d91f8f0fb12fca44a5206711ae91d68d6bd643a1a018e3f59de30cd0415691b91e@172.18.0.1:30300", # Node0
+"enode://70f8784653cb189b6e2daf925f25f1ca3dfad266370b6ddd258551e48159bd5b9c23bdd39367155136a0ee7d6331d4107c0a765850ccc706c37686baefb039a1@172.18.0.1:30301", # Node1
+"enode://20d155e5b7279055257ae20d6c0e1a3935dc38cbc941fc5039d1b889e298ce34b5e9f082c84d3f1394984b341553a9ae426ce4372f33efc83b98afa50f51c3aa@172.18.0.1:30303"  # Alice
+]
+
+[rpc]
+disable = true
+#port = 8540
+
+[websockets]
+disable = true
+#port = 8450
+
+[account]
+password = ["node0.pwd"]
+
+[mining]
+engine_signer = "0xa2922fec00bb29fe13d68e87f64b9ad1719ed64a"
+reseal_on_txs = "none"
+force_sealing = true

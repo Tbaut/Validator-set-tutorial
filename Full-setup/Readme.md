@@ -1,6 +1,6 @@
 # End result of Parity's Validator-set tutorial
 
-This repo contains all the configuration files as well as the account keys and blockchain data from the [Validator-Set tutorial](https://wiki.parity.io/Validator-Set-Tutorial-Overview).
+This repo contains all the configuration files as well as the account keys and blockchain data from the [Validator-Set tutorial](https://wiki.parity.io/Validator-Set-Tutorial-Overview). One exception though, the chain specification file (genesis) does not contain all the builtins (added later in the tutorial).
 
 Nodes:
 - `Node0`: `0xa2922fec00bb29fe13d68e87f64b9ad1719ed64a`
